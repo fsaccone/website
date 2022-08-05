@@ -1,0 +1,13 @@
+.link,
+.link:link,
+.link:visited
+{
+    color: var(--theme-link-text);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.link:hover
+{
+    text-decoration: underline;
+}

@@ -1,0 +1,4 @@
+.icon > *
+{
+    border-radius: calc(var(--global-navbar-height) / 2);
+}

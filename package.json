@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "npm run lint && webpack",
+    "clean-config": "npm ci",
+    "config": "npm install",
+    "deploy": "gh-pages -d build",
+    "dev": "webpack serve --open --mode development",
+    "lint": "eslint . && stylelint .",
+    "lint:fix": "eslint . --fix && stylelint . --fix",
+    "predeploy": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-typescript": "*",
+    "@fsaccone/eslint-config": "*",
+    "@typescript-eslint/parser": "*",
+    "babel-loader": "*",
+    "clean-webpack-plugin": "*",
+    "copy-webpack-plugin": "*",
+    "css-loader": "*",
+    "css-minimizer-webpack-plugin": "*",
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "*",
+    "mini-css-extract-plugin": "*",
+    "stylelint": "*",
+    "stylelint-order": "*",
+    "typescript": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}

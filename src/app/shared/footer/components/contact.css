@@ -1,0 +1,17 @@
+.footer-contact
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-contact > h2
+{
+    font-family: sans-serif;
+}
+
+.footer-contact > span
+{
+    display: block;
+}

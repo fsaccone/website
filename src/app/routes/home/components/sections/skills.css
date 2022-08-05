@@ -1,0 +1,78 @@
+.skills
+{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+@media (orientation : landscape)
+{
+
+    .skill
+    {
+        width: 25vw;
+    }
+}
+
+@media (orientation : portrait)
+{
+
+    .skill
+    {
+        width: 70vw;
+    }
+}
+
+.skill
+{
+    margin: calc(var(--global-home-section-margin)/2) 0;
+}
+
+.skill:hover
+{
+    --hover-percentage: 100%;
+    --background-color: var(--theme-foreground-inverse);
+}
+
+.skill > h3
+{
+    color: var(--theme-foreground-2);
+}
+
+.skill > div
+{
+    align-items: center;
+    background-color: var(--background-color, #00000000);
+    border: solid 3px var(--theme-foreground-3);
+    border-radius: 7px;
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 7px;
+    justify-content: flex-start;
+    padding: 2px;
+    transition: 0.4s ease-in-out;
+    width: 100%;
+}
+
+.skill-percentage-bar,
+.skill-hover-percentage-bar
+{
+    border-radius: 7px;
+    height: 100%;
+}
+
+.skill-percentage-bar
+{
+    background-color: var(--theme-secondary);
+    width: var(--percentage, 0);
+}
+
+.skill-hover-percentage-bar
+{
+    background-color: var(--theme-primary);
+    transition: 0.4s ease-in-out;
+    width: var(--hover-percentage, 0);
+}

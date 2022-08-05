@@ -1,0 +1,23 @@
+.subtitle
+{
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.subtitle > h2
+{
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+.subtitle > div
+{
+    background: fixed var(--theme-primary);
+    height: 2px;
+    transition: 0.2s ease-in-out;
+
+    /* --underline-width is modified in parent elements e.g. .home-section */
+    width: var(--underline-width, 50%);
+}

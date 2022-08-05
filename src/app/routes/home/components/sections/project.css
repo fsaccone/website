@@ -1,0 +1,42 @@
+.home-project
+{
+    border: solid 5px var(--theme-foreground-2);
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: calc(var(--global-home-section-margin) / 2) 0;
+    padding: calc(var(--global-home-section-margin) / 2);
+    width: 100%;
+}
+
+.home-project > span
+{
+    float: right;
+    font-family: sans-serif;
+    font-weight: 700;
+    top: 0;
+}
+
+.home-project-link,
+.home-project-link:link,
+.home-project-link:visited
+{
+    color: var(--theme-secondary);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.home-project-link:hover
+{
+    text-decoration: underline;
+}
+
+.home-project > p
+{
+    inline-size: 100%;
+    overflow: visible;
+}
+
+.home-project:hover
+{
+    background-color: var(--theme-foreground-inverse);
+}
