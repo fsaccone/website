@@ -5,6 +5,8 @@ import 'index.css'
 import 'theme.css'
 import { formatPath } from 'utils'
 
+let latestRoutePath: string | null = null
+
 document.body.dataset['theme'] = localStorage['theme'] ?? DEFAULT_THEME
 
 /**
@@ -14,8 +16,13 @@ document.body.dataset['theme'] = localStorage['theme'] ?? DEFAULT_THEME
  * @param path - The URL.
  */
 const loadRoute = async (path: string): Promise<void> => {
+    if (path === latestRoutePath) {
+        return
+    }
+
     const route = routes.filter(r => formatPath(r.path) === formatPath(path))[0] ?? notFound
 
+    latestRoutePath = path
     location.hash = formatPath(path)
     document.body.innerText = ''
     await route.main(document.body)

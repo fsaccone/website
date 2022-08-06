@@ -185,7 +185,7 @@
         "at-rule-semicolon-newline-after": "always",
         "at-rule-semicolon-space-before": "never",
         "indentation": 4,
-        "linebreaks": "windows",
+        "linebreaks": null,
         "max-empty-lines": 1,
         "max-line-length": null,
         "no-eol-whitespace": true,
