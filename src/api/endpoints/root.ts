@@ -1,3 +1,5 @@
-interface IRoot {}
+type IRoot = {}
 
-export type { IRoot }
+export type {
+  IRoot,
+}

@@ -1,26 +1,26 @@
 .home-section
 {
-    align-items: var(--parent-flex-align, center);
-    display: flex;
-    flex-flow: column nowrap;
-    margin: var(--global-home-section-margin);
+  align-items: var(--parent-flex-align, center);
+  display: flex;
+  flex-flow: column nowrap;
+  margin: var(--global-home-section-margin);
 }
 
 .subtitle
 {
-    margin: 0 30px;
+  margin: 0 30px;
 }
 
 .home-section-content
 {
-    font-family: sans-serif;
-    inline-size: auto;
-    margin: 0;
+  font-family: sans-serif;
+  inline-size: auto;
+  margin: 0;
 }
 
 .home-section:hover
 {
 
-    /* --underline-width is used in .subtitle */
-    --underline-width: 100%;
+  /* --underline-width is used in .subtitle */
+  --underline-width: 100%;
 }

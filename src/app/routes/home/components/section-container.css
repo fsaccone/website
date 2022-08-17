@@ -1,59 +1,59 @@
 .home-section-container
 {
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .home-section
 {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 @media (orientation : landscape)
 {
 
-    .home-section-container
+  .home-section-container
     {
-        align-items: flex-start;
-        flex-direction: row;
-        justify-content: center;
-    }
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-    .home-section-list
+  .home-section-list
     {
-        align-items: var(--parent-flex-align);
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        width: 50%;
-    }
+    align-items: var(--parent-flex-align);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width: 50%;
+  }
 
-    .home-section-list:first-child
+  .home-section-list:first-child
     {
-        --parent-flex-align: flex-end;
-    }
+    --parent-flex-align: flex-end;
+  }
 
-    .home-section-list:last-child
+  .home-section-list:last-child
     {
-        --parent-flex-align: flex-start;
-    }
+    --parent-flex-align: flex-start;
+  }
 
-    .home-section
+  .home-section
     {
-        flex-basis: calc(50% - (2 * var(--global-home-section-margin)));
-        max-width: 50%;
-    }
+    flex-basis: calc(50% - (2 * var(--global-home-section-margin)));
+    max-width: 50%;
+  }
 }
 
 @media (orientation : portrait)
 {
 
-    .home-section-container
+  .home-section-container
     {
-        align-items: center;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }

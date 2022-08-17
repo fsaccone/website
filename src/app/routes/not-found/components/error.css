@@ -1,18 +1,18 @@
 .error
 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 16px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px;
 }
 
 .error-alert
 {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 .error a
 {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }

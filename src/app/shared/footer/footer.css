@@ -1,31 +1,28 @@
 .footer
 {
-    align-items: center;
-    background: var(--theme-background-3);
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    left: 0;
-    padding-bottom: 12px;
-    position: static;
-    width: 100vw;
-    z-index: 199;
+  align-items: center;
+  background: var(--theme-background-3);
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 12px;
+  width: 100vw;
+  z-index: 199;
 }
 
 @media (orientation : landscape)
 {
 
-    .footer
-    {
-        flex-direction: row;
-    }
+  .footer
+  {
+    flex-direction: row;
+  }
 }
 
 @media (orientation : portrait)
 {
 
-    .footer
-    {
-        flex-direction: column;
-    }
+  .footer
+  {
+    flex-direction: column;
+  }
 }
