@@ -1,32 +1,32 @@
 html,
 body
 {
-    border: 0;
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
-    scroll-behavior: smooth;
+  border: 0;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body
 {
-    background: scroll var(--theme-background-1) repeat;
-    min-height: 100vh;
-    min-width: 100vw;
+  background: scroll var(--theme-background-1) repeat;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 img
 {
-    max-height: 100%;
-    max-width: 100%;
-    user-select: none;
+  max-height: 100%;
+  max-width: 100%;
+  user-select: none;
 }
 
 *
 {
-    box-sizing: border-box;
-    color: var(--theme-foreground-1);
-    transition-duration: 0.1s;
-    transition-property: background-color;
-    transition-timing-function: ease-in;
+  box-sizing: border-box;
+  color: var(--theme-foreground-1);
+  transition-duration: 0.1s;
+  transition-property: background-color;
+  transition-timing-function: ease-in;
 }

@@ -1,17 +1,32 @@
-import { Component } from 'app/component'
-import { getSectionLists } from './models/section-lists'
-import './section-container.css'
+import {
+  Component,
+} from 'app/component'
+import {
+  getSectionLists,
+} from './models/section-lists'
+import classes from './section-container.css'
 
 type GetSectionContainer = () => Promise<Component<HTMLDivElement>>
 
 /**
- * Returns a container of two columns containing all the sections, gotten from ./models.
+ * Returns a container of two columns containing all the sections, gotten from
+ * ./models.
  */
-export const getSectionContainer: GetSectionContainer = async () => new Component('div', {
+const getSectionContainer: GetSectionContainer = async () => new Component(
+  'div',
+  {
     children: (await getSectionLists())
-        .map(sectionList => new Component('div', {
-            children: sectionList,
-            classList: ['home-section-list'],
-        })),
-    classList: ['home-section-container'],
-})
+      .map((sectionList) => new Component(
+        'div',
+        {
+          children: sectionList,
+          classList: [classes['home-section-list']],
+        },
+      )),
+    classList: [classes['home-section-container']],
+  },
+)
+
+export {
+  getSectionContainer,
+}

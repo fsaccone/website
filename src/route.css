@@ -1,0 +1,22 @@
+.route-main
+{
+  animation: load-animation 0.3s ease-in-out forwards;
+  background: scroll var(--theme-background-1) repeat;
+  margin-top: var(--global-navbar-height);
+  min-height: calc(100vh - var(--global-navbar-height));
+  min-width: 100vw;
+}
+
+@keyframes load-animation
+{
+
+  from
+  {
+    transform: translateY(100%);
+  }
+
+  to
+  {
+    transform: translateY(0);
+  }
+}

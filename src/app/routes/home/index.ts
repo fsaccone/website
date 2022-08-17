@@ -1,23 +1,35 @@
-import { Component } from 'app/component'
-import { getFooter, getNavbar } from 'app/shared'
-import { getSectionContainer } from './components/section-container'
-import type { IRoute } from '../route'
+import {
+  Component,
+} from 'app/component'
+import {
+  getFooter, getNavbar,
+} from 'app/shared'
+import {
+  getSectionContainer,
+} from './components/section-container'
+import type {
+  Route,
+} from '../route'
 
 /**
  * The main route, that corresponds to the root ("/").
  */
-export const home: IRoute = {
-    path: '/',
-    async main(root) {
-        const rootComponent = new Component('div', {
-            children: [
-                await getSectionContainer(),
-                await getFooter(),
-            ],
-            classList: ['route', 'home'],
-        })
-        const navbar = await getNavbar()
+export const home: Route = {
+  path: '/',
+  async main(root) {
+    const rootComponent = new Component(
+      'main',
+      { children: [await getSectionContainer()] },
+    )
+    const navbar = await getNavbar()
+    const footer = await getFooter()
 
-        root.append(navbar.dom.node, rootComponent.dom.node)
-    },
+    return [
+      rootComponent.dom.node,
+      [
+        navbar.dom.node,
+        footer.dom.node,
+      ],
+    ]
+  },
 }

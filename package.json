@@ -4,9 +4,11 @@
     "build": "npm run test && npm run lint && webpack",
     "config": "npm ci --silent || npm install",
     "dev": "webpack serve --open --mode development",
+    "deploy": "gh-pages -d build",
     "lint": "npm run lint:eslint & npm run lint:stylelint",
     "lint:eslint": "eslint . --fix",
     "lint:stylelint": "stylelint . --fix",
+    "predeploy": "npm run build",
     "test": "jest"
   },
   "devDependencies": {
@@ -14,7 +16,6 @@
     "@babel/preset-env": "*",
     "@babel/preset-typescript": "*",
     "@fsaccone/eslint-config": "*",
-    "@teamsupercell/typings-for-css-modules-loader": "*",
     "@types/jest": "*",
     "babel-loader": "*",
     "clean-webpack-plugin": "*",
