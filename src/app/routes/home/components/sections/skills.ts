@@ -5,6 +5,9 @@ import {
   Component,
 } from 'app/component'
 import {
+  Img,
+} from 'app/shared'
+import {
   shuffle,
 } from 'utils/shuffle-array'
 import {
@@ -31,30 +34,9 @@ export const getSkillsComponent: GetSkillsComponent = async () => new Section(
                 'h3',
                 { children: [skill.title] },
               ),
-              new Component(
-                'div',
-                {
-                  children: [
-                    new Component(
-                      'div',
-                      {
-                        classList: [classes['skill-percentage-bar']],
-                        immediately(node) {
-                          node.style.setProperty(
-                            '--percentage',
-                            `${skill.percentage}%`,
-                          )
-                        },
-                        children: [
-                          new Component(
-                            'div',
-                            { classList: [classes['skill-hover-bar']] },
-                          ),
-                        ],
-                      },
-                    ),
-                  ],
-                },
+              new Img(
+                skill.image_url,
+                skill.title,
               ),
             ],
             classList: [classes['skill']],
