@@ -1,6 +1,10 @@
+type Image = {
+  title: string,
+  url: string,
+}
 type Skill = {
   title: string,
-  percentage: number,
+  images: Image[],
 }
 
 const endpoint = 'https://fsaccone.github.io/data/me/skills/'

@@ -11,6 +11,8 @@ body[data-theme='light']
   --theme-primary: #187498ff;
   --theme-secondary: #30966bff;
   --theme-switch-button: #be9d18ff;
+  --theme-is-light: 1;
+  --theme-is-dark: 0;
 }
 
 body[data-theme='dark']
@@ -26,4 +28,6 @@ body[data-theme='dark']
   --theme-primary: #9fb4ffff;
   --theme-secondary: #99ffcdff;
   --theme-switch-button: #eee8a9ff;
+  --theme-is-light: 0;
+  --theme-is-dark: 1;
 }
