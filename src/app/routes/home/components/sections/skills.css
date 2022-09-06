@@ -29,9 +29,11 @@
 {
   --img-brightness: 0;
   --img-invert: var(--theme-is-dark);
+  --title-line-height: 1.5em;
   --title-color: var(--theme-foreground-2);
   --title-first-shadow-y: 0;
-  --title-second-shadow-y: 1.2em;
+  --title-second-shadow-y: var(--title-line-height);
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   margin: calc(var(--global-home-section-margin)/4) 0;
@@ -42,31 +44,42 @@
   --img-brightness: 1;
   --img-invert: 0;
   --title-color: var(--theme-secondary);
-  --title-first-shadow-y: -1.2em;
+  --title-first-shadow-y: calc(var(--title-line-height) * -1);
   --title-second-shadow-y: 0;
 }
 
 .skill > h3
 {
-  border: 5px solid var(--title-color);
+  border: 6px solid var(--title-color);
   border-left: 0;
-  border-radius: 5px;
+  border-radius: 6px;
   border-right: 0;
   color: #00000000;
-  line-height: 1.2em;
+  display: block;
+  line-height: var(--title-line-height);
   overflow: hidden;
-  padding: 0;
+  padding: 0 8px;
+  text-align: center;
   text-shadow:
     0 var(--title-first-shadow-y) var(--theme-foreground-2),
     0 var(--title-second-shadow-y) var(--theme-secondary);
   transition: 0.2s ease-in-out;
+  width: min-content;
 }
 
-.skill > img
+.skill > div
+{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.skill img
 {
   --brightness: var(--img-brightness, 0);
   --invert: var(--img-invert, var(--theme-is-dark));
   filter: brightness(var(--brightness)) invert(var(--invert));
+  margin: 0 10px;
   transition: 0.2s ease-in-out;
   width: 25%;
 }

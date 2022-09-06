@@ -34,9 +34,14 @@ export const getSkillsComponent: GetSkillsComponent = async () => new Section(
                 'h3',
                 { children: [skill.title] },
               ),
-              new Img(
-                skill.image_url,
-                skill.title,
+              new Component(
+                'div',
+                {
+                  children: skill.images.map((i) => new Img(
+                    i.url,
+                    i.title,
+                  )),
+                },
               ),
             ],
             classList: [classes['skill']],
